@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lan_kod_array">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="stockholm_kod_array">
+        <item>0</item>
+        <item>0127</item>
+        <item>0162</item>
+        <item>0125</item>
+        <item>0136</item>
+        <item>0126</item>
+        <item>0123</item>
+        <item>0186</item>
+        <item>0182</item>
+    </string-array>
+    <string-array name="uppsala_kod_array">
+        <item>0</item>
+        <item>0381</item>
+        <item>0331</item>
+        <item>0305</item>
+        <item>0330</item>
+        <item>0360</item>
+        <item>0380</item>
+        <item>0319</item>
+        <item>0382</item>
+    </string-array>
+    <string-array name="sodermanland_kod_array">
+        <item>0</item>
+        <item>0484</item>
+        <item>0482</item>
+        <item>0461</item>
+        <item>0483</item>
+        <item>0480</item>
+        <item>0481</item>
+        <item>0486</item>
+        <item>0488</item>
+        <item>0428</item>
+    </string-array>
+    <string-array name="ostergotland_kod_array">
+        <item>0</item>
+        <item>0560</item>
+        <item>0562</item>
+        <item>0513</item>
+        <item>0580</item>
+        <item>0586</item>
+        <item>0583</item>
+        <item>0581</item>
+        <item>0582</item>
+        <item>0584</item>
+        <item>0563</item>
+        <item>0512</item>
+        <item>0561</item>
+        <item>0509</item>
+    </string-array>
+    <string-array name="anstallningstyp_kod_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="alla_kod_array">
+        <item>0</item>
+    </string-array>
+</resources>
