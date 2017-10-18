@@ -133,7 +133,6 @@ public class MatchningActivity extends AppCompatActivity implements MatchningSer
                     } else if (reference.equals(anstallningstypKod.toString())) {
                         anstallningstypKodDatabase = value;
                     }
-                    Log.d(TAG, "Value is: " + value);
                 }
             }
 
@@ -299,6 +298,7 @@ public class MatchningActivity extends AppCompatActivity implements MatchningSer
     }
 
     private void search() {
+        searchView.clearFocus();
         hideKeyboard();
         progressDialog.show();
         appBarLayout.setExpanded(false);
