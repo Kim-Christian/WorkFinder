@@ -16,7 +16,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -61,7 +60,6 @@ public class MatchningActivity extends AppCompatActivity implements MatchningSer
     private String kommunKodDatabase;
     private String anstallningstypDatabase;
     private String anstallningstypKodDatabase;
-    private InputMethodManager inputManager;
     private ProgressDialog progressDialog;
     private AppBarLayout appBarLayout;
     private DatabaseReference fritext;
@@ -227,8 +225,6 @@ public class MatchningActivity extends AppCompatActivity implements MatchningSer
         matchningParams = new MatchningParams();
         matchningService = new MatchningService(this);
 
-        inputManager =
-                (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Hämtar...");
     }
@@ -245,16 +241,6 @@ public class MatchningActivity extends AppCompatActivity implements MatchningSer
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-    }
-
-    private boolean hideKeyboard() {
-        try {
-            inputManager.hideSoftInputFromWindow(
-                    searchView.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
     }
 
     private String getKod(Spinner spinner) {
@@ -299,7 +285,6 @@ public class MatchningActivity extends AppCompatActivity implements MatchningSer
 
     private void search() {
         searchView.clearFocus();
-        hideKeyboard();
         progressDialog.show();
         appBarLayout.setExpanded(false);
         matchningParams.setFritext(searchView.getQuery().toString());
